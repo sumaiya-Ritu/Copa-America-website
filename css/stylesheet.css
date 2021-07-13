@@ -123,3 +123,27 @@ p{
     color: #6C6C6C;
     margin: 10px 0px;
 }
+/* footer */
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 484px;
+    height: 475px;
+    padding-top: 158px;
+
+}
+.footer-img{
+    width: 484px;
+    height: 110px;
+    padding: 0;
+    margin:20px 0px ;
+}
+.footer-logo{
+    display: flex;
+    flex-direction: row;
+   height: 32px;
+   width: 32px;
+   margin-right:14px ;
+}
+
