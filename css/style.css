@@ -32,7 +32,7 @@ img{
 .button:hover{
     padding: 12px 22px;
     box-shadow: inset 100px 0 0 0 #e81856;
-    transition: 0.3s ease-out;
+    transition: 0.3s ease-in-out;
 }
 
 .container{
@@ -156,6 +156,58 @@ article h3{
     color: black;
 }
 /* highlight section css end */
+/* photo-album */
+#photo-album{
+    width: 100%;
+    height: 40vh;
+    align-items: center;
+    /* margin: 100px; */
+    margin-top: 90px;
+    color:#c23616;
+}
+#photo-album h2{
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 5%;
+}
+.photo-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-flow: row;
+    }
+.photo-frame{
+    width: 400px;
+    height: 300px;
+    border-radius: 3px solid black;
+    border-radius: 2px;
+    margin: 10px;
+    overflow: hidden;
+}
+.photo img{
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px;
+}
+.photo-detail{
+    display: none;
+    position: absolute;
+    width: 330px;
+    top: 0;
+}
+.photo-detail h2{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.photo-frame:hover .photo-detail {
+    display: none;
+    background-color: rgba(199, 180, 134, 0.7);
+}
+
+.photo-frame:hover .photo {
+    transform: scale(1.2) ;
+    transition: transform 2s ease-in-out;
+}
 /* sponsor */
 #sponsor{
     /* display: flex;
@@ -164,7 +216,7 @@ article h3{
     height: 40vh;
     align-items: center;
     /* margin: 100px; */
-    margin-top: 90px;
+    margin-top: 20%;
     color:#c23616;
 }
 #sponsor h2{
@@ -213,7 +265,7 @@ footer i{
     font-size: 32px;
     color: gray;
     background-color: gainsboro;
-     -radius: 50%;
+     border-radius: 50%;
     padding: 5px;
     margin-right: 15px;
 }
