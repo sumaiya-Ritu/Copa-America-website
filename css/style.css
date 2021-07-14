@@ -161,7 +161,7 @@ article h3{
     width: 100%;
     height: 40vh;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 40px;
     color:#c23616; 
     cursor: pointer;
     
@@ -211,17 +211,15 @@ article h3{
     transition: transform 2s ease-in-out;
 }
 /* sponsor */
-#sponsor{
-    /* display: flex;
-    flex-direction: row; */
+/* #sponsor{
+
     width: 100%;
     height: 40vh;
     align-items: center;
-    /* margin: 100px; */
     margin-top: 20%;
     color:#c23616;
-}
-#sponsor h2{
+} */
+/* #sponsor h2{
     font-size: 2em;
     text-align: center;
     padding-bottom: 5%;
@@ -229,22 +227,23 @@ article h3{
 .image-container{
     display: flex;
     flex-direction: row;
-}
-#sponsor img{
+} */
+/* #sponsor img{
     width: 250px;
     height: 170px;
     margin-right: 10px;
     padding-left: 10px;
-}
-
+} */
+/* spon */
 /* footer section start */
 footer .container{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 300px;
+    width: 100%;
    justify-content: center;
-   margin-top: 10%;
+   margin-top: 20%;
 }
 
 
@@ -283,22 +282,39 @@ footer p{
 /* footer section end */
 /* mediaquery */
 @media only screen and ( max-width: 688px){
-    #top-banner, .image-container, .container, .photo-container, .sponsor-img{
-        width: 100%;
-        display: flex;
-    }
-    #article, #highlights, #photo-album, #sponsor{
-        grid-template-columns: repeat(1,1fr);
-        flex-direction: column;
-    }
+   section{
+       width: 100%;
+       padding: 0;
+       margin:0;
+   }
+   *{
+       margin: 0;
+       padding: 0;
+   }
 
-}
-@media only screen and  (min-width: 411px)and (max-width: 992px){
 .container{
-    width: 100%;
+    flex-direction: column;
 }
-#top-banner{
-    display: grid;
-    grid-template-columns: repeat(1.1fr);
+.info{
+    padding-left: 0px;
+}
+.info h1{
+    padding-top: 30px;
+}
+#article .container{
+    grid-template-columns: repeat(1, 1fr);
+}
+#article .container img{
+    width:400px;
+    height: 350px;
+    border-radius: 10px;
+}
+#article{
+    padding-left: 0px;
+    padding: 25px;
+    border: 4px solid #FFFFFF;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
 }
