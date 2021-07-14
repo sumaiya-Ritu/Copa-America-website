@@ -108,11 +108,14 @@ article h3{
 
 /* Match Section Start */
 #match{
-    background-color: white;
+    background: #00416A;  
+    background: -webkit-linear-gradient(to bottom, #E4E5E6, #00416A); 
+    background: linear-gradient(to bottom, #E4E5E6, #00416A); 
     height: auto;
 }
 
 #match h1{
+    color: aliceblue;
     text-align: center;
     padding-top: 10rem;
     font-size: 48px;
