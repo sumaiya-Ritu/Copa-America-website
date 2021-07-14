@@ -1,4 +1,3 @@
-/* fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
 :root{
@@ -9,6 +8,7 @@
 *{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -31,8 +31,7 @@ img{
 
 .button:hover{
     padding: 12px 22px;
-    box-shadow: inset 100px 0 0 0 #e81856;
-    transition: 0.3s ease-in-out;
+    transition: 0.1s;
 }
 
 .container{
@@ -42,86 +41,50 @@ img{
 
 /* basic css end */
 
-/* navbar section start */
-/* nav{
-    background-color: var(--banner-background);
-    position: sticky;
-    top: 0;
-} */
-
-/* nav .container{
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    align-items: center;
-} */
-
-/* menu{
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-} */
-
-/* menu a{
-    text-decoration: none;
-    text-transform: capitalize;
-    color: white;
-}
-
-menu a:hover{
-    color: var(--button-background);
-    transition: 0.2s;
-} */
-/* navbar section end */
-
-/* mig-grid section css start */
-#top-banner{
+/* top section css start */
+#top{
     background-color: var(--banner-background);
 }
 
-/* adding highlight section css with mid-grid section css  */
-#top-banner .container, 
+/* adding highlight section css with hroe section css to reduce repeatation */
+#top .container, 
 #highlights .container{
     display: flex;
     justify-content: space-between;
     height: 90vh;
     align-items: center;
+       
     color: white;
 }
 
-#top-banner .info,
+#top .info,
 #highlights .info{
     width: 45%;
     height: 400px;
 }
 
-#top-banner .image,
+#top .image,
 #highlights .image{
     width: 50%; 
 }
 
-#top-banner .image
-{
-    transform: scale(1);
-    transition: 0.3s ease-in-out;
- /* transition: transform 0.2s ease-in-out; */
+#top img, 
+#highlights img{
+ transition: transform 0.2s ease-in-out;
 }
 
-#top-banner .image:hover{
-    /* transform: translate(-10px, -10px); */
-    transform: scale(1.1);
+#top img:hover{
+    transform: translate(-10px, -10px);
 }
 
-#top-banner h1,
+#top h1,
 #highlights h1{
     font-size: 64px;
     line-height: 80px;
     margin-bottom: 30px;
 }
-.highlights{
-    background-color:gainsboro;
-}
-/* mig-grid section css end */
+
+/* top section css end */
 
 /* article section start */
 #article .container{
@@ -129,12 +92,12 @@ menu a:hover{
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap:30px;
     grid-row-gap:30px;
-    margin: 50px auto; 
+    margin: 80px auto; 
 }
 
 article{
 background: white;
-padding: 20px;
+padding: 15px;
 box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -142,6 +105,64 @@ article h3{
     font-size: 28px;
 }
 /* article section end */
+
+/* Match Section Start */
+#match{
+    background-color: white;
+    height: auto;
+}
+
+#match h1{
+    text-align: center;
+    padding-top: 10rem;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+#match hr{
+    width: 10%;
+    margin: auto;
+    height: 5px;
+    background-color: var(--button-background);
+    border: none;
+}
+
+#match .container{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    height: 70vh;
+    align-items: center;
+}
+
+#match .team{
+    width: 30%;
+}
+
+#match .vs{
+    width: 30%;
+    text-transform: uppercase;
+}
+
+#match .vs h3{
+    font-size: 48px;
+    color: var(--button-background);
+}
+
+#match .vs p{
+    background-color: var(--banner-background);
+    color: white;
+    padding: 20px 0;
+}
+
+#match .team:first-child  img{
+    width: 50%;
+}
+
+#match .team:last-child  img{
+    width: 40%;
+}
+/* Match Section End */
 
 /* highlight section css start */
 #highlights h1{
@@ -158,94 +179,105 @@ article h3{
     color: black;
 }
 /* highlight section css end */
-/* photo-album */
-#photo-album{
-    width: 100%;
-    height: 40vh;
+
+/* contact section start */
+#contact{
+    background-color: var(--button-background);
+}
+
+#contact .container{
+    display: flex;
+    height: 90vh;
     align-items: center;
-    margin-top: 40px;
-    color:#c23616; 
-    cursor: pointer;
+}
+
+#contact .image{
+width: 60%;
+}
+
+#contact img{
+   width: 80%;
+   margin-bottom: -95px;
+}
+
+#contact .form{
+    width: 40%;
+    color: white;
+}
+
+.form h3{
+    font-size: 62px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+}
+
+.name, .email, .message{
+    width: 94%;
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color:white;
+}
+
+input, textarea{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    color: var(--banner-background);
+}
+
+::placeholder{
+    color: var(--banner-background);
+    font-weight: 100;
+    opacity: 0.5;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+#contact i{
+    font-size: 26px;
+    margin-right: 10px;
+    font-weight: 100;
+    color: var(--banner-background);
+}
+
+.btn-group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+input[type=submit],
+input[type=reset]{
+    width: 48%;
+    padding: 10px 0;
+    background-color: var(--banner-background);
+    color: white;
     
 }
-#photo-album h2{
-    font-size: 2em;
-    text-align: center;
-    padding-bottom: 5%;
-}
-.photo-container{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-auto-flow: row;
-    }
-.photo-frame{
-    width: 400px;
-    height: 300px;
-    border-radius: 3px solid black;
-    border-radius: 2px;
-    margin: 10px;
-    overflow: hidden;
-}
-.photo img{
-    width: 100%;
-    border-radius: 10px;
-    margin: 10px;
-}
-.photo-detail{
-    display: none;
-    position: absolute;
-    overflow: scroll;
-    width: 330px;
-    top: 0;
-}
-.photo-detail h2{
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-.photo-frame:hover .photo-detail {
-    /* display: none; */
-    background-color: rgba(199, 180, 134, 0.7);
-}
 
-.photo-frame:hover .photo {
-    transform: scale(1.2) ;
-    transition: transform 2s ease-in-out;
+input[type=submit]:hover,
+input[type=reset]:hover{
+    cursor: pointer;
+    background-color: white;
+    color: var(--banner-background);
+    transition: 0.2s;
 }
-/* sponsor */
-/* #sponsor{
+/* contact section end */
 
-    width: 100%;
-    height: 40vh;
-    align-items: center;
-    margin-top: 20%;
-    color:#c23616;
-} */
-/* #sponsor h2{
-    font-size: 2em;
-    text-align: center;
-    padding-bottom: 5%;
-}
-.image-container{
-    display: flex;
-    flex-direction: row;
-} */
-/* #sponsor img{
-    width: 250px;
-    height: 170px;
-    margin-right: 10px;
-    padding-left: 10px;
-} */
-/* spon */
 /* footer section start */
 footer .container{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 300px;
-    width: 100%;
    justify-content: center;
-   margin-top: 20%;
 }
 
 
@@ -268,7 +300,7 @@ footer i{
     font-size: 32px;
     color: gray;
     background-color: gainsboro;
-     border-radius: 50%;
+    border-radius: 50%;
     padding: 5px;
     margin-right: 15px;
 }
@@ -282,41 +314,4 @@ footer p{
     font-size: 18px;
 }
 /* footer section end */
-/* mediaquery */
-@media only screen and (max-width:600px){
-   section{
-       width: 100%;
-       padding: 0;
-       margin:0;
-   }
-   *{
-       margin: 0;
-       padding: 0;
-   }
 
-.container{
-    flex-direction: column;
-}
-.info{
-    padding-left: 0px;
-}
-.info h1{
-    padding-top: 30px;
-}
-#article .container{
-    grid-template-columns: repeat(1, 1fr);
-}
-#article .container img{
-    width:400px;
-    height: 350px;
-    border-radius: 10px;
-}
-#article{
-    padding-left: 0px;
-    padding: 25px;
-    border: 4px solid #FFFFFF;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-}
-}
