@@ -149,7 +149,7 @@ article h3{
 
 #match .vs h3{
     font-size: 48px;
-    color: var(--button-background);
+    color: white;
 }
 
 #match .vs p{
