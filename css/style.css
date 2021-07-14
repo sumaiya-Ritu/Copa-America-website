@@ -43,26 +43,26 @@ img{
 /* basic css end */
 
 /* navbar section start */
-nav{
+/* nav{
     background-color: var(--banner-background);
     position: sticky;
     top: 0;
-}
+} */
 
-nav .container{
+/* nav .container{
     display: flex;
     justify-content: space-between;
     height: 100px;
     align-items: center;
-}
+} */
 
-menu{
+/* menu{
     width: 50%;
     display: flex;
     justify-content: space-between;
-}
+} */
 
-menu a{
+/* menu a{
     text-decoration: none;
     text-transform: capitalize;
     color: white;
@@ -71,7 +71,7 @@ menu a{
 menu a:hover{
     color: var(--button-background);
     transition: 0.2s;
-}
+} */
 /* navbar section end */
 
 /* mig-grid section css start */
@@ -118,7 +118,9 @@ menu a:hover{
     line-height: 80px;
     margin-bottom: 30px;
 }
-
+.highlights{
+    background-color:gainsboro;
+}
 /* mig-grid section css end */
 
 /* article section start */
@@ -281,7 +283,7 @@ footer p{
 }
 /* footer section end */
 /* mediaquery */
-@media only screen and ( max-width: 688px){
+@media only screen and (max-width:600px){
    section{
        width: 100%;
        padding: 0;
